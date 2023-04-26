@@ -50,8 +50,11 @@
 
 
     let words=text.split(" ");
-    console.log(words);
-    document.getElementById("word").innerHTML=words.length;
+    let cleanList=words.filter(function(elm){
+        return elm !="";
+    })
+    console.log(cleanList);
+    document.getElementById("word").innerHTML=cleanList.length;
     });
   </script>
 </body>
