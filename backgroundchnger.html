@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 20px 100px;
+    }
+
+    h1{
+        text-align: center;
+        text-decoration:underline ;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    p{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .btn{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border: solid grey 2px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    #white{
+        background-color:white ;
+    }
+    #blue{
+        background-color:blue ;
+    }
+    #grey{
+        background-color:black ;
+    }
+    #aqua{
+        background-color:aqua ;
+    }
+    #color-switcher{
+        text-align: right;
+    }
+
+</style>
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="blue" onclick="changeBG('#000080')"></span>
+        <span class="btn" id="grey" onclick="changeBG('#000000')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+    </div>
+    <h1 class="text">About us</h1>
+    <img src="https://st4.depositphotos.com/14101486/39713/i/450/depositphotos_397133942-stock-photo-rules-compliance-policies-business-technology.jpg" alt="" >
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur accusantium repellat tenetur libero vitae consequatur possimus! Provident, perferendis? Dicta aliquid mollitia recusandae sapiente illo ipsa eligendi quidem asperiores tenetur beatae!
+
+    </p>
+    <script>
+        function changeBG(color){
+            document.body.style.background= color;
+            let txt= document.getElementsByClassName("text");
+            if(color=="#000000"){
+
+                for(let elm of txt){
+                    elm.style.color="white";
+
+                }
+            }else{
+                    for(let elm of txt){
+                    elm.style.color="black";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
