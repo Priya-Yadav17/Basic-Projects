@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky navbar</title>
+</head>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 100px 100px;
+        }
+        #header{
+            text-align: center;
+        }
+        #logo{
+            width: 200px;
+            height: auto;
+        }
+        #menu_bar{
+             text-align: center;
+             background-color: aquamarine;
+             
+        }
+        #menu_bar li{
+            display: inline-block;
+            padding: 15px 10px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    
+       #container{
+        text-align: center;
+        padding: 50px 100px;
+       }
+       #about-img{
+        width: 100%;
+       }
+       .sticky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+       }
+        /* changes */
+    
+    </style>
+    <body>
+        <div id= "header">
+            <img src="https://img.freepik.com/premium-vector/creative-idea-logo-symbol-creativity-half-light-bulb-brain-concept-innovation-solution-education-symbol-creativity-creative-idea-mind-thinking-vector-illustration_435184-1299.jpg?w=2000" id="logo">
+        </div>
+        <nav id="menu_bar" class="sticky">
+            <li>Home</li>
+            <li>About us</li>
+            <li>Our Team</li>
+            <li>Client</li>
+            <li>Contact Us</li>
+
+        </nav>
+        <div id="Container">
+        <h1 class="text">About us</h1>
+        <img src="https://st4.depositphotos.com/14101486/39713/i/450/depositphotos_397133942-stock-photo-rules-compliance-policies-business-technology.jpg" alt="" >
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur accusantium repellat tenetur libero vitae consequatur possimus! Provident, perferendis? Dicta aliquid mollitia recusandae sapiente illo ipsa eligendi quidem asperiores tenetur beatae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit rerum fugiat assumenda, ipsa quam incidunt, libero provident dolor nisi exercitationem excepturi at nostrum inventore consectetur sequi, iste aut veritatis?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, animi ipsum quidem reiciendis voluptatem itaque id natus ab alias ducimus ex voluptate accusamus exercitationem minima ratione vel laudantium minus possimus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum vel reprehenderit blanditiis eos esse labore est facilis error, optio quae sint exercitationem enim repellat sequi omnis corrupti iusto. Dolor, culpa!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil odio distinctio itaque praesentium officia obcaecati cupiditate impedit consectetur, repellendus, ullam dicta aperiam, maiores magni vero pariatur? Tempore est error provident.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur voluptates facere veritatis harum quisquam temporibus autem recusandae eos saepe, est, magnam assumenda itaque iusto, libero voluptate nam adipisci ea aperiam!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, nihil! Eius incidunt reiciendis dicta facilis corporis illo maxime repellendus inventore placeat. Tenetur ducimus quibusdam odio saepe modi voluptate architecto! Modi?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus natus ullam ea sint, iure veniam impedit consequatur omnis sapiente repudiandae dolorem ex in, assumenda esse ipsa earum reprehenderit dolores rerum?
+    
+        </p>
+        </div>
+        <script>
+           window.addEventListener('scroll', function(){
+            let navbar=document.getElementById("menu_bar");
+            if (window.pageYOffset>=190){
+                navbar.classList.add('sticky');
+            }else{
+                navbar.classList.remove('sticky');
+            }
+           });
+        </script>
+</body>
+</html>
